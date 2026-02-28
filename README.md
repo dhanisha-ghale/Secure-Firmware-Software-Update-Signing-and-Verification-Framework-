@@ -1,0 +1,2 @@
+# Secure-Firmware-Software-Update-Signing-and-Verification-Framework-
+A Secure Firmware Signing and Verification Framework designed to protect software and firmware updates from unauthorized modification and malicious injection. The system leverages RSA-2048 digital signatures, SHA-256 hashing, AES encryption, and a PKI-based trust model to ensure update authenticity, integrity, and confidentiality.
