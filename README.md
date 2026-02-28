@@ -1,43 +1,35 @@
-🔐 Secure Firmware Signing & Verification Framework
+# 🔐 Secure Firmware Signing & Verification Framework
 
+---
 
-
-
-
-
-
-
-📌 Overview
+## 📌 Overview
 
 A cryptographic framework designed to secure firmware and software update mechanisms against tampering, malicious injection, and unauthorized distribution.
 
 Modern IoT devices, industrial systems, and consumer electronics rely heavily on OTA updates. Without proper protection, attackers can exploit update channels to compromise system integrity.
 
-This framework implements:
+### 🚀 Core Technologies
 
-SHA-256 hashing
+- SHA-256 Hashing  
+- RSA-2048 Digital Signatures  
+- AES Encryption  
+- PKI-based Certificate Validation  
 
-RSA-2048 digital signatures
+---
 
-AES encryption
+## 🎯 Objectives
 
-PKI-based certificate validation
+- ✅ Ensure firmware authenticity  
+- ✅ Maintain firmware integrity  
+- ✅ Protect update confidentiality  
+- ✅ Prevent Replay & MITM attacks  
+- ✅ Provide structured audit logging  
 
-to ensure secure and trusted firmware distribution.
+---
 
-🎯 Objectives
+## 🏗 System Architecture
 
-✅ Ensure firmware authenticity
-
-✅ Maintain firmware integrity
-
-✅ Protect update confidentiality
-
-✅ Prevent Replay & MITM attacks
-
-✅ Provide structured audit logging
-
-🏗 System Architecture
+```
 Vendor
    ↓
 SHA-256 Hashing
@@ -49,155 +41,181 @@ AES Encryption
 Secure Distribution
    ↓
 Device Verification (PKI Validation)
-🔎 Secure Update Flow
+```
 
-Firmware is hashed using SHA-256
+### 🔎 Secure Update Flow
 
-Hash is signed using Vendor RSA Private Key
+1. Firmware is hashed using **SHA-256**
+2. Hash is digitally signed using **Vendor RSA Private Key**
+3. Firmware is encrypted using **AES**
+4. Device verifies signature using **Public Key**
+5. Certificate is validated via a **Trusted CA**
+6. Only verified and authenticated firmware is installed
 
-Firmware is encrypted using AES
 
-Device verifies signature using Public Key
+---
 
-Certificate is validated via Trusted CA
+## 🔐 Cryptographic Technologies Used
 
-Only verified firmware is installed
+### 🔹 SHA-256
+Generates a unique fingerprint of firmware files.  
+Any modification results in a completely different hash value.
 
-✔ Defense-in-depth architecture
-
-🔐 Cryptographic Technologies Used
-🔹 SHA-256
-
-Generates a unique fingerprint for firmware files.
-Any modification results in a completely different hash.
-
-🔹 RSA-2048 Digital Signatures
-
-Ensures authenticity and non-repudiation.
+### 🔹 RSA-2048 Digital Signatures
+Ensures authenticity and non-repudiation.  
 Only the private key holder can generate valid signatures.
 
-🔹 AES Encryption
-
+### 🔹 AES Encryption
 Protects firmware during storage and transmission.
 
-🔹 Public Key Infrastructure (PKI)
-
+### 🔹 Public Key Infrastructure (PKI)
 Implements certificate-based trust using a Certificate Authority (CA).
 
-🖥 GUI Modules
+---
 
-The framework includes a user-friendly graphical interface built using PyQt6.
+## 🖥 GUI Modules
 
-Available Modules
+The framework includes a user-friendly graphical interface built using **PyQt6**.
 
-🔑 Key Generation Module
+### Available Modules
 
-📜 Certificate Management Module
+- 🔑 Key Generation Module  
+- 📜 Certificate Management Module  
+- ✍ Firmware Signing Module  
+- ✔ Firmware Verification Module  
+- 📊 Logging Panel  
 
-✍ Firmware Signing Module
 
-✔ Verification Module
+---
 
-📊 Logging Panel
+## 🛡 Security Controls
 
-Secure backend cryptography with simplified frontend interaction.
+The framework protects against:
 
-🛡 Security Controls
+- Firmware Tampering  
+- Unauthorized Vendor Updates  
+- Replay Attacks  
+- Man-in-the-Middle (MITM) Attacks  
+- Malware Injection via OTA Updates  
 
-The framework defends against:
+---
 
-Firmware Tampering
-
-Unauthorized Vendor Updates
-
-Replay Attacks
-
-Man-in-the-Middle (MITM) Attacks
-
-Malware Injection via OTA Updates
-
-Tampered firmware is automatically detected via signature mismatch and hash inconsistency.
-
-🧪 Testing & Validation
+## 🧪 Testing & Validation
 
 The system was tested under simulated attack scenarios.
 
-Test Case	Result
-Tampered Firmware	✅ Detected
-Certificate Validation	✅ Successful
-Replay Attack	✅ Blocked
-IoT Performance	✅ Efficient
+| Test Case | Result |
+|-----------|--------|
+| Tampered Firmware | ✅ Detected |
+| Certificate Validation | ✅ Successful |
+| Replay Attack | ✅ Blocked |
+| IoT Performance | ✅ Efficient |
 
-✔ 100% detection of modified firmware
+✔ 100% detection of modified firmware.
 
-🌍 Application Areas
+---
 
-IoT Devices – Secure OTA firmware updates
+## 🌍 Application Areas
 
-Industrial Control Systems (PLCs) – Prevent malicious firmware injection
+- **IoT Devices** – Secure OTA firmware updates  
+- **Industrial Control Systems (PLCs)** – Prevent malicious firmware injection  
+- **Consumer Electronics** – Validate and secure software updates  
 
-Consumer Electronics – Validate and secure software updates
+---
 
-📊 Key Achievements
+## 📊 Key Achievements
 
-Hybrid encryption implementation
+- Hybrid encryption implementation  
+- PKI-based authentication model  
+- Modular and scalable architecture  
+- Structured audit logging  
+- Complete secure firmware lifecycle demonstration  
 
-PKI-based authentication model
+---
 
-Modular & scalable architecture
-
-Structured audit logging
-
-Complete secure firmware lifecycle demonstration
-
-📚 Standards Alignment
+## 📚 Standards Alignment
 
 Aligned conceptually with:
 
-ISO/IEC 27001 principles
+- ISO/IEC 27001 principles  
+- NIST Secure Update recommendations  
+- PKI & Digital Signature standards  
+- Secure Software Development best practices  
 
-NIST Secure Update recommendations
+---
 
-PKI & Digital Signature standards
+# 🚀 Installation & Setup
 
-Secure Software Development best practices
+## 📦 Prerequisites
 
-🚀 Installation & Setup
-📦 Prerequisites
+- Python 3.9+
+- Git
+- pip
+- (Recommended) Virtual Environment
 
-Python 3.9+
+### Verify Installation
 
-Git
-
-pip
-
-(Recommended) Virtual Environment
-
-Verify installation:
-
+```bash
 python --version
 git --version
 pip --version
-🔽 Step 1: Clone Repository
+```
+
+---
+
+## 🔽 Step 1: Clone Repository
+
+```bash
 git clone https://github.com/dhanisha-ghale/Secure-Firmware-Software-Update-Signing-and-Verification-Framework.git
 cd Secure-Firmware-Software-Update-Signing-and-Verification-Framework
+```
 
-📚 Step 2: Install Dependencies
+---
+
+## 📚 Step 2: Install Dependencies
+
+### Recommended Method
+
+```bash
 pip install -r requirements.txt
+```
 
-If installing manually:
+### Manual Installation (If Needed)
+
+```bash
 pip install cryptography pyopenssl requests
 pip install pywin32
 pip install pandas
 pip install PyQt6
+```
 
-▶ Step 3: Run the Framework
-🖥 Run GUI Version
-python gui/main_gui.py
-💻 Run CLI Version
-python -m demo.demo_script2
+---
 
-🏁 Conclusion
+## ▶ Step 3: Run the Framework
+
+### 🖥 Run GUI Version
+
+```bash
+   python gui/main_gui.py
+```
+
+### 💻 Run CLI Version
+
+```bash
+   python -m demo.demo_script2
+```
+
+---
+
+## ⚠ Security Notice
+
+- Do not commit private keys to public repositories.
+- Always validate certificates in production environments.
+- Use production-grade CA certificates for real deployments.
+
+---
+
+## 🏁 Conclusion
 
 The Secure Firmware Signing & Verification Framework demonstrates a secure and practical implementation of cryptographic protection for firmware updates.
 
