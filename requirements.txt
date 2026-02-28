@@ -1,0 +1,6 @@
+cryptography
+pyopenssl
+requests
+pywin32
+pandas
+PyQt6

@@ -1,0 +1,23 @@
+2026-02-25 23:28:00,146 - INFO - ==== Starting Secure Firmware Update Demo ====
+2026-02-25 23:28:00,200 - INFO - CA initialized.
+2026-02-25 23:28:00,272 - INFO - Vendor certificate issued by CA.
+2026-02-25 23:28:00,273 - INFO - Firmware created at updates/signed/firmware_v1.bin
+2026-02-25 23:28:00,289 - INFO - Firmware signed. Metadata saved: updates/signed/firmware_v1.bin.metadata.json
+2026-02-25 23:28:00,293 - INFO - Firmware encrypted at updates/encrypted/firmware_v1.bin.enc
+2026-02-25 23:28:00,305 - INFO - Firmware verification: True
+2026-02-25 23:28:00,305 - INFO - Firmware version is new, safe to install.
+2026-02-25 23:28:00,305 - INFO - Attack simulation results: {'tamper_detected': False, 'replay_detected': False, 'mitm_detected': False}
+2026-02-25 23:28:01,617 - INFO - Runtime bargraph saved at logs/performance/runtime_analysis.png
+2026-02-25 23:28:01,617 - INFO - ==== Demo Completed Successfully ====
+2026-02-26 00:21:26,991 - INFO - ==== Starting Secure Firmware Update Demo ====
+2026-02-26 00:21:27,063 - INFO - CA initialized.
+2026-02-26 00:21:27,094 - INFO - Vendor certificate issued by CA.
+2026-02-26 00:21:27,094 - INFO - Firmware created at updates/signed/firmware_v1.bin
+2026-02-26 00:21:27,112 - INFO - Firmware signed. Metadata saved: updates/signed/firmware_v1.bin.metadata.json
+2026-02-26 00:21:27,114 - INFO - Firmware encrypted at updates/encrypted/firmware_v1.bin.enc
+2026-02-26 00:21:27,132 - INFO - Firmware verification: True
+2026-02-26 00:21:27,132 - INFO - Firmware version is new, safe to install.
+2026-02-26 00:21:27,132 - INFO - Attack simulation results: {'tamper_detected': False, 'replay_detected': False, 'mitm_detected': False}
+2026-02-26 00:21:27,161 - INFO - Tampered firmware verification: False
+2026-02-26 00:21:28,927 - INFO - Runtime bargraph saved at logs/performance/runtime_analysis.png
+2026-02-26 00:21:28,927 - INFO - ==== Demo Completed Successfully ====
