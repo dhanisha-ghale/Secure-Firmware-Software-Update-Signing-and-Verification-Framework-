@@ -104,13 +104,13 @@ class SecureFirmwareCLI:
             )
 
             if is_valid:
-                print("   ✅ Signature valid. Firmware is safe to install.\n")
+                print("   ✅ Signature Valid. Firmware is safe to install.\n")
             else:
-                print("   ❌ Signature invalid! Firmware is unsafe.\n")
+                print("   ❌ Signature Invalid! Firmware is unsafe.\n")
 
-        except Exception as e:
-            print(f"   ❌ Verification failed: {e}")
-            return
+        except Exception:
+            print("   ❌ Signature Invalid! Firmware is unsafe.\n")
+        return
 
         print(f"✅ Firmware verification completed: {'Valid' if is_valid else 'Invalid'}\n")
 
